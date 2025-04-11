@@ -1,0 +1,238 @@
+/* Hero section from previous styles.css */
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--hero-background);
+  color: var(--hero-text);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hero-shape:nth-child(1) {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  animation: float 10s infinite alternate;
+}
+
+.hero-shape:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: 10%;
+  animation: float 15s 1s infinite alternate-reverse;
+}
+
+.hero-shape:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  top: 20%;
+  left: 30%;
+  animation: float 12s 2s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(30px) rotate(10deg);
+  }
+}
+
+
+
+
+/* AI Writer specific styles */
+
+/* Hero section customization */
+.ai-writer-hero {
+    background: linear-gradient(120deg, #6366f1, #4f46e5);
+  }
+  
+  /* Features customization */
+  .ai-writer-features .feature-icon {
+    color: #4f46e5;
+  }
+  
+  /* Steps section customization */
+  .steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .step {
+    text-align: center;
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    position: relative;
+    transition: transform var(--transition-speed);
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: 700;
+  }
+  
+  /* Screenshots Gallery */
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .screenshot {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--card-shadow);
+    transition: transform var(--transition-speed);
+  }
+  
+  .screenshot:hover {
+    transform: translateY(-5px);
+  }
+  
+  .screenshot img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+  
+  .screenshot p {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  /* FAQ Section */
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px var(--card-shadow);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+  }
+  
+  .faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--card-shadow);
+  }
+  
+  .faq-question {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--card-border);
+    font-size: 1.2rem;
+    position: relative;
+  }
+  
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+  }
+  
+  .faq-answer {
+    margin-top: 1rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 300px;
+  }
+  
+  /* Install button pulse animation */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+  }
+  
+  .install-button {
+    animation: pulse 2s infinite;
+  }
+  
+  .install-button:hover {
+    animation: none;
+  }
+  

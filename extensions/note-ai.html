@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note AI  - AI Extensions Suite</title>
+    <meta name="description" content="AI-powered writing assistant to help you create better content" />
+    <meta name="author" content="AI Extensions" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/extensions.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <span class="logo-icon">ZAP</span>
+          <span class="logo-text">Flow</span>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero ai-writer-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Note AI</h1>
+          <p class="hero-subtitle">Select text on any site, and let AI help you save and summarize your notes</p>
+          <a href="#download" class="cta-button install-button">Install Extension</a>
+        </div>
+      </div>
+      <div class="hero-background">
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+      </div>
+    </section>
+
+    <!-- Extension Description -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Note AI</h2>
+        <p class="section-description">
+          Note AI is a powerful Chrome extension designed to capture selected text from any website and convert it into neatly organized notes using AI.
+        </p>
+        </p>
+        
+        <div class="features-grid ai-writer-features" style="margin-top: 4rem;">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Smart Notes</h3>
+            <p>Instantly turn selected text into clean and structured notes</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <h3>Summarize Content</h3>
+            <p>AI summarizes key ideas and highlights from any webpage</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3>Bookmark Snippets</h3>
+            <p>Save insights, definitions, or explanations from articles</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Privacy First</h3>
+            <p>Your selections are stored locally and securely in your browser</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="features" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Install the Extension</h3>
+            <p>Add NoteMaker AI to Chrome with a single click</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Select Text</h3>
+            <p>Highlight any text you want to capture on any site</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Save or Summarize</h3>
+            <p>Use the AI to store or summarize the highlighted content</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Organize Your Notes</h3>
+            <p>Access, search, and categorize your notes easily</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+      <div class="container">
+        <h2 class="section-title">See It In Action</h2>
+        <div class="screenshot-gallery">
+          <div class="screenshot">
+            <img src="../Screenshots\Note-Screenshots\1.png" alt="NoteMaker Screenshot 1">
+            <p>Select and store any information instantly</p>
+          </div>
+          <div class="screenshot">
+            <img src="../Screenshots\Note-Screenshots\2.png" alt="NoteMaker Screenshot 2">
+            <p>Summarize technical articles or blog posts</p>
+          </div>
+          <!-- <div class="screenshot">
+            <img src="https://placehold.co/800x450?text=NoteMaker+Screenshot+3" alt="NoteMaker Screenshot 3">
+            <p>Stay organized with categorized notes</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- User Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Users Say</h2>
+        <div class="testimonial-carousel">
+          <div class="testimonial-slide active">
+            <p class="testimonial-content">"NoteMaker AI has transformed how I study! I can quickly grab definitions and explanations and organize them perfectly."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K." class="author-image">
+              <div>
+                <p class="author-name">Sarah K.</p>  
+                <p class="author-title">Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-content">"Perfect for research work. I no longer waste time copy-pasting into messy docs—this extension keeps my ideas sorted."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Michael T." class="author-image">
+              <div>
+                <p class="author-name">Teesha T.</p>
+                <p class="author-title">Research Analyst</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-content">"This tool is a game-changer for productivity. I can quickly mark key insights while browsing news or blogs."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jennifer L." class="author-image">
+              <div>
+                <p class="author-name">Jennifer L.</p>
+                <p class="author-title">Content Curator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-control prev" id="testimonialPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+          <button class="testimonial-control next" id="testimonialNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="cta" id="download">
+      <div class="container">
+        <h2 class="cta-title">Ready to Take Smarter Notes?</h2>
+        <p class="cta-description">Join thousands of learners and researchers capturing web insights with NoteMaker AI.</p>
+        <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button install-button">Add to Chrome</a>
+        <p class="cta-small" style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">Free to install</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3 class="faq-question">Is NoteMaker AI free to use?</h3>
+            <p class="faq-answer">Yes! It’s free and supports unlimited note captures. Future premium features will offer advanced integrations.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I organize my saved notes?</h3>
+            <p class="faq-answer">Absolutely. Your notes can be tagged, filtered, and categorized within the extension’s dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-title">Extensions</h3>
+            <p class="footer-description">Supercharge your workflow with AI-powered Chrome extensions.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Links</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+              <li><a href="../index.html#extensions">Extensions</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-envelope"></i> hello@aiextensions.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 AI Extensions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/extensions.js"></script>
+  </body>
+</html>

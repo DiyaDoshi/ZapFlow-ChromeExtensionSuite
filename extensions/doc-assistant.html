@@ -1,0 +1,277 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Doc Assistant - AI Extensions Suite</title>
+    <meta name="description" content="AI-powered assistant to help you understand and summarize your Google Docs" />
+    <meta name="author" content="AI Extensions" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/extensions.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <span class="logo-icon">ZAP</span>
+          <span class="logo-text">Flow</span>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero ai-writer-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Google Doc Assistant</h1>
+          <p class="hero-subtitle">Extract content, summarize documents, and ask anything inside Google Docs</p>
+          <a href="#download" class="cta-button install-button">Install Extension</a>
+        </div>
+      </div>
+      <div class="hero-background">
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+        <div class="hero-shape"></div>
+      </div>
+    </section>
+
+    <!-- Extension Description -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Google Doc Assistant</h2>
+        <p class="section-description">
+            Google Doc Assistant is a Chrome extension that enhances your Docs workflow by helping you extract document content, summarize long texts, and answer any question about the document in real time — right within Google Docs.
+        </p>
+        
+        <div class="features-grid ai-writer-features" style="margin-top: 4rem;">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Real-Time Q&A</h3>
+            <p>Ask questions and get answers instantly from your current Google Doc</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <h3>Summarize Content</h3>
+            <p>Generate accurate summaries of complex or lengthy documents</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-language"></i>
+            </div>
+            <h3>Smart Suggestions</h3>
+            <p>Get rephrased content, improve tone, or brainstorm better alternatives</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Privacy First</h3>
+            <p>Everything happens in your browser — your documents never leave your device</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="features" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Install the Extension</h3>
+            <p>Add Google Doc Assistant to Chrome with a single click</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Open a Google Doc</h3>
+            <p>Seamlessly integrates into your document environment</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Ask or Summarize</h3>
+            <p>Use the sidebar chatbot to ask anything or summarize selected text</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Work Smarter</h3>
+            <p>Speed up research, content writing, and document understanding</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+      <div class="container">
+        <h2 class="section-title">See It In Action</h2>
+        <div class="screenshot-gallery">
+          <div class="screenshot">
+            <img src="../Screenshots\Doc-Screenshots\1.png" alt="Google Doc Assistant Screenshot 1">
+            <p>Real-time answers directly from your document content</p>
+          </div>
+          <div class="screenshot">
+            <img src="../Screenshots\Doc-Screenshots\2.png" alt="Google Doc Assistant Screenshot 2">
+            <p>Summarize complex research papers in one click</p>
+          </div>
+          <div class="screenshot">
+            <img src="../Screenshots\Doc-Screenshots\3.png" alt="Google Doc Assistant Screenshot 3">
+            <p>Boost writing with smart suggestions and tone improvements</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Users Say</h2>
+        <div class="testimonial-carousel">
+          <div class="testimonial-slide active">
+            <p class="testimonial-content">"Google Doc Assistant completely transformed the way I review documents. I can highlight a paragraph and get a summary or ask questions on the go!"</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K." class="author-image">
+              <div>
+                <p class="author-name">Sarah K.</p>
+                <p class="author-title">Content Strategist</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-content">"It’s like having ChatGPT but inside my Google Docs. I use it for project reports, research, and client deliverables daily."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Michael T." class="author-image">
+              <div>
+                <p class="author-name">Michael T.</p>
+                <p class="author-title">Freelance Writer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-content">"As a student, this saves hours of reading. I just ask questions to get what I need from my class notes and PDFs."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jennifer L." class="author-image">
+              <div>
+                <p class="author-name">Jennifer L.</p>
+                <p class="author-title">University Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-control prev" id="testimonialPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+          <button class="testimonial-control next" id="testimonialNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="cta" id="download">
+      <div class="container">
+        <h2 class="cta-title">Ready to Level Up Your Docs?</h2>
+        <p class="cta-description">Join professionals and students improving productivity with AI in Google Docs.</p>
+        <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button install-button">Add to Chrome</a>
+        <p class="cta-small" style="margin-top: 1rem; opacity: 0.8; font-size: 0.9rem;">Free to install • Premium features available</p>
+      </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3 class="faq-question">Is Doc Assistant free to use?</h3>
+            <p class="faq-answer">Doc Assistant offers both free and premium plans. The free plan includes basic document support with limited generations per day, while the premium plan unlocks unlimited usage and advanced editing features.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">What is Doc Assistant, and how does it work?</h3>
+            <p class="faq-answer">Doc Assistant is an AI-powered tool designed to help you draft, edit, and improve documents efficiently. It assists with grammar correction, formatting suggestions, rewriting content, and even generating new ideas.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Is my data secure?</h3>
+            <p class="faq-answer">Absolutely. Doc Assistant ensures top-tier security and does not store or share any of your document data. Your content remains private and confidential.</p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">What AI model powers Doc Assistant?</h3>
+            <p class="faq-answer">Doc Assistant uses a cutting-edge large language model, optimized specifically for writing and editing tasks to deliver accurate, relevant, and high-quality suggestions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-title">Extensions</h3>
+            <p class="footer-description">Supercharge your workflow with AI-powered Chrome extensions.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Links</h3>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+              <li><a href="../index.html#extensions">Extensions</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-envelope"></i> hello@aiextensions.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 AI Extensions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/extensions.js"></script>
+  </body>
+</html>

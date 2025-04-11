@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Extension Suite | About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+    <meta name="description" content="Learn about the team behind AI-powered Chrome extensions" />
+    <meta name="author" content="AI Extensions" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    :root {
+      --background: hsl(240, 33%, 98%);
+      --foreground: hsl(240, 10%, 3.9%);
+      --extension-dark: #1A1F2C;
+      /* --extension-purple: #9b87f5; */
+      --extension-purple: #8b5cf6;
+      --extension-light-purple: #D6BCFA;
+      --extension-bright-blue: #1EAEDB;
+      --extension-charcoal: #221F26;
+      --extension-gray: #8A898C;
+      --border: hsl(240, 5.9%, 90%);
+      --radius: 0.75rem;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(to right, var(--extension-purple), var(--extension-bright-blue));
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    main {
+      padding-top: 6rem;
+    }
+    
+    .about-section {
+      padding: 4rem 1.5rem;
+    }
+    
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .intro {
+      text-align: center;
+      margin-bottom: 4rem;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .intro h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(to right, var(--extension-purple), var(--extension-bright-blue));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .intro p {
+      font-size: 1.125rem;
+      color: var(--extension-gray);
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+    
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    
+    .section-heading h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .section-heading svg {
+      color: var(--extension-purple);
+    }
+    
+    .values {
+      margin-bottom: 5rem;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .value-item {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .value-item:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    
+    .value-item:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    
+    .value-line {
+      height: 0.25rem;
+      width: 5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .value-line.purple {
+      background-color: var(--extension-purple);
+    }
+    
+    .value-line.blue {
+      background-color: var(--extension-bright-blue);
+    }
+    
+    .value-line.dark {
+      background-color: var(--extension-dark);
+    }
+    
+    .value-item h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .progress-bar {
+      height: 0.25rem;
+      background-color: #e5e7eb;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background-color: var(--extension-purple);
+      border-radius: 9999px;
+    }
+    
+    .value-item p {
+      color: var(--extension-gray);
+    }
+    
+    .mission {
+      margin-bottom: 5rem;
+    }
+    
+    .mission-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .mission-content {
+        flex-direction: row;
+      }
+    }
+    
+    .mission-card {
+      flex: 1;
+      background: linear-gradient(to bottom right, rgba(155, 135, 245, 0.05), rgba(30, 174, 219, 0.05));
+      padding: 2rem;
+      border-radius: var(--radius);
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+    }
+    
+    .mission-quote {
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .divider-line {
+      height: 2px;
+      flex: 1;
+      background-color: rgba(155, 135, 245, 0.3);
+    }
+    
+    .divider-text {
+      font-size: 0.75rem;
+      color: var(--extension-gray);
+    }
+    
+    .mission-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.6s;
+    }
+    
+    .mission-tag {
+      padding: 1rem;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .mission-tag span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+    }
+    
+    .mission-tag:nth-child(odd) {
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    
+    .mission-tag:nth-child(even) {
+      background-color: rgba(155, 135, 245, 0.1);
+    }
+    
+    .mission-tag span.purple {
+      color: var(--extension-purple);
+    }
+    
+    .mission-tag span.blue {
+      color: var(--extension-bright-blue);
+    }
+    
+    .creator {
+      margin-bottom: 4rem;
+    }
+    
+    .creator-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .creator-content {
+        flex-direction: row;
+      }
+    }
+    
+    .creator-avatar {
+      flex: 1;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, var(--extension-purple), var(--extension-bright-blue));
+      opacity: 0.2;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.7s;
+    }
+    
+    .creator-info {
+      flex: 2;
+      border-left: 4px solid var(--extension-bright-blue);
+      padding-left: 1.5rem;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.8s;
+    }
+    
+    .creator-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .creator-info p {
+      color: var(--extension-gray);
+      margin-bottom: 1.5rem;
+    }
+    
+    .creator-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: var(--radius);
+      border: 1px solid #f0f0f0;
+      margin-bottom: 1rem;
+    }
+    
+    .code-purple {
+      color: var(--extension-purple);
+    }
+    
+    .code-blue {
+      color: var(--extension-bright-blue);
+    }
+    
+    .code-gray {
+      color: #6b7280;
+    }
+    
+    .connect-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--extension-purple);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    
+    .philosophy-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      margin-bottom: 6rem;
+    }
+    
+    @media (min-width: 768px) {
+      .philosophy-section {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .philosophy-content {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 0.9s;
+    }
+    
+    .philosophy-line {
+      height: 0.25rem;
+      width: 5rem;
+      background-color: var(--extension-purple);
+      margin-bottom: 2rem;
+    }
+    
+    .philosophy-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .philosophy-content p {
+      color: var(--extension-gray);
+      margin-bottom: 2rem;
+    }
+    
+    .philosophy-card {
+      background: linear-gradient(to bottom right, rgba(155, 135, 245, 0.05), rgba(30, 174, 219, 0.05));
+      padding: 2rem;
+      border-radius: var(--radius);
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    
+    .icon-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-number {
+      font-size: 0.75rem;
+      color: var(--extension-gray);
+    }
+    
+    .philosophy-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .philosophy-card p {
+      color: var(--extension-gray);
+    }
+    
+    .developer-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    @media (min-width: 768px) {
+      .developer-section {
+        flex-direction: row;
+      }
+    }
+    
+    .developer-info {
+      flex: 1;
+      border-left: 4px solid var(--extension-bright-blue);
+      padding-left: 1.5rem;
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 1.1s;
+    }
+    
+    .developer-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    
+    .developer-info p {
+      color: var(--extension-gray);
+    }
+    
+    .developer-card {
+      flex: 1;
+      background-color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+      animation-delay: 1.2s;
+    }
+    
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .icon-small {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: rgba(155, 135, 245, 0.1);
+    }
+    
+    .card-title h4 {
+      font-weight: 600;
+    }
+    
+    .grid-break {
+      padding: 6rem 1.5rem;
+      background: linear-gradient(to bottom, var(--background), rgba(155, 135, 245, 0.05));
+    }
+
+    /* Mobile styles */
+    @media (max-width: 767px) {
+      .nav-links,
+      nav .btn-primary {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .intro h1 {
+        font-size: 2rem;
+      }
+      
+      .intro p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <span class="logo-icon">ZAP</span>
+          <span class="logo-text">Flow</span>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="about-section">
+        <div class="section-container">
+          <div class="intro">
+            <h1>Streamlined <span class="gradient-text">AI tools</span></h1>
+            <p>A minimalist suite of AI-powered extensions designed for modern interfaces</p>
+          </div>
+          
+          <!-- Values Section -->
+          <div class="values">
+            <div class="section-heading">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5h-14l3-3h8l3 3z"/><path d="M17 17v3c0 .8-.2 1-1 1h-8c-.8 0-1-.2-1-1v-3"/><path d="M12 14v3"/><path d="M5 8v9"/><path d="M19 8v9"/><path d="M5 11h14"/></svg>
+              <h2>Our Values</h2>
+            </div>
+            
+            <div class="values-grid">
+              <div class="value-item">
+                <div class="value-line purple"></div>
+                <h3>Simplicity</h3>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+                <p>We believe in reduction to essence. No unnecessary features.</p>
+              </div>
+              
+              <div class="value-item">
+                <div class="value-line blue"></div>
+                <h3>Focus</h3>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+                <p>Tools that help you concentrate on what matters most.</p>
+              </div>
+              
+              <div class="value-item">
+                <div class="value-line dark"></div>
+                <h3>Intelligence</h3>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%;"></div>
+                </div>
+                <p>Smart, adaptable, and unobtrusive assistance.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mission Section -->
+          <div class="mission">
+            <div class="section-heading">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1EAEDB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-7l-2-2"/><path d="M20.6 10.3V7.5l-4.3 6a25.4 25.4 0 0 0-4.3-6v2.8c-.5 0-1 .1-1.4.3l-3.8 1.8A9.3 9.3 0 0 1 5 5.5V3l6-2 6 2v2.5c0 2.6.8 5 2.4 7l-3 1.4c-.4-.2-.9-.3-1.4-.3"/></svg>
+              <h2>Our Mission</h2>
+            </div>
+            
+            <div class="mission-content">
+              <div class="mission-card">
+                <p class="mission-quote">
+                  "To create tools that blend seamlessly with your workflow, enhancing productivity without demanding attention."
+                </p>
+                <div class="divider">
+                  <div class="divider-line"></div>
+                  <span class="divider-text">CORE PURPOSE</span>
+                  <div class="divider-line"></div>
+                </div>
+              </div>
+              
+              <div class="mission-grid">
+                <div class="mission-tag">
+                  <span class="purple">Amplify human potential</span>
+                </div>
+                
+                <div class="mission-tag">
+                  <span>Reduce digital noise</span>
+                </div>
+                
+                <div class="mission-tag">
+                  <span>Connect seamlessly</span>
+                </div>
+                
+                <div class="mission-tag">
+                  <span class="blue">Respect user focus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Creator Section -->
+          <div class="creator">
+            <div class="section-heading">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <h2>The Creator</h2>
+            </div>
+            
+            <div class="creator-content">
+              <div class="creator-avatar"></div>
+              
+              <div class="creator-info">
+                <h3>Design Engineer</h3>
+                <p>
+                  Built by a developer who believes tools should adapt to users, not the other way around. With a background in UX design and software development.
+                </p>
+                
+                <div class="creator-code">
+                  <span class="code-purple">function</span> <span class="code-blue">buildBetter</span>(<span class="code-gray">tools</span>) {'}'}
+                </div>
+                
+                <a href="https://www.linkedin.com/in/diya-doshi-52b027301/" class="connect-link">
+                  <span>Connect</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Minimalist Philosophy -->
+          <div class="philosophy-section">
+            <div class="philosophy-content">
+              <div class="philosophy-line"></div>
+              <h2>Minimalist Philosophy</h2>
+              <p>
+                Every feature is designed with intentional restraint, focusing on functionality that matters and eliminating visual noise.
+              </p>
+              <a href="#" class="connect-link">
+                <span>Learn more</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+            
+            <div class="philosophy-card">
+              <div class="card-header">
+                <div class="icon-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m5 5 14 14"/></svg>
+                </div>
+                <span class="card-number">01</span>
+              </div>
+              <h3>No Disruptions</h3>
+              <p>
+                Our extensions never interrupt your flow with notifications or heavy processes. They simply make your existing tools smarter.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Developer First -->
+          <div class="developer-section">
+            <div class="developer-info">
+              <h3>For Creators & Builders</h3>
+              <p>
+                Built specifically for developers, designers, and content creators who appreciate thoughtful, unobtrusive tooling.
+              </p>
+            </div>
+            
+            <div class="developer-card">
+              <div class="card-title">
+                <div class="icon-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                </div>
+                <h4>Developer-First</h4>
+              </div>
+              <div class="creator-code">
+                <span class="code-purple">ai</span>.<span class="code-blue">integrate</span>(<span class="code-gray">workflow</span>);
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="grid-break">
+        <div class="section-container">
+          <!-- Grid break content would go here -->
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-title">Extensions</h3>
+            <p class="footer-description">Supercharge your workflow with AI-powered Chrome extensions.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html#extensions">Extensions</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-envelope"></i> hello@aiextensions.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2023 AI Extensions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Additional page-specific scripts
+      document.addEventListener('DOMContentLoaded', () => {
+        // Animate elements when they come into view
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-fade-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        
+        // Observe elements
+        document.querySelectorAll('.story-content, .mission-content, .team-card, .value-card').forEach(element => {
+          observer.observe(element);
+        });
+      });
+    </script>
+  </body>
+</html> 

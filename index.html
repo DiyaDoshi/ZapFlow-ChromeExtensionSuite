@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Extensions Suite</title>
+    <meta name="description" content="AI-powered Chrome extensions to supercharge your workflow" />
+    <meta name="author" content="AI Extensions" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <span class="logo-icon">ZAP</span>
+          <span class="logo-text">Flow</span>
+        </div>
+        <!-- <div class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div> -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>          
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-20">
+      <div class="hero-section" id="heroContainer">
+        <canvas id="networkCanvas" class="network-canvas"></canvas>
+        
+        <div class="absolute-decoration">
+          <div class="decoration-circle" style="top:20%; left:10%;"></div>
+          <div class="decoration-circle" style="top:30%; right:15%; animation-delay:1s;"></div>
+          <div class="decoration-circle" style="bottom:15%; left:25%; animation-delay:2s;"></div>
+        </div>
+        
+        <div class="container grid-layout">
+          <!-- Left Column - Text -->
+          <div class="left-column stagger-animation">
+            <div class="hero-content">
+              <span class="badge animate-slide-in-left">Supercharge Your Productivity</span>
+              <h1 class="headline animate-slide-in-left" style="animation-delay:0.2s;">
+                <span class="block">AI-Powered</span>
+                <span class="gradient-text block">Productivity Tools</span>
+                <span class="block">for Chrome</span>
+              </h1>
+              <p class="description animate-slide-in-left" style="animation-delay:0.4s;">
+                Transform your browsing experience with AI assistants for Gmail, Google Docs, and more - all in one powerful Chrome extension.
+              </p>
+              <div class="cta-group animate-slide-in-left" style="animation-delay:0.6s;">
+                <button class="cta-primary" onclick="location.href='#extensions'" >Get the Extension</button>
+                <button class="cta-secondary">
+                  Learn more
+                  <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column - Browser Mockup -->
+          <div class="right-column animate-slide-in-right" style="animation-delay:0.5s;">
+            <div class="browser-mockup parallax-item" data-strength="0.03">
+              <div class="browser-header">
+                <div class="browser-buttons">
+                  <div class="browser-button red"></div>
+                  <div class="browser-button yellow"></div>
+                  <div class="browser-button green"></div>
+                </div>
+                <div class="browser-address-bar">chrome-extension://ai-productivity-tools</div>
+              </div>
+              <div class="browser-content">
+                <div class="app-content">
+                  <div class="app-header">
+                    <div class="app-logo">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="app-icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="app-title">AI Workspace</div>
+                      <div class="app-subtitle">Powered by machine learning</div>
+                    </div>
+                  </div>
+                  
+                  <div class="placeholder-lines">
+                    <div class="placeholder-line line-1"></div>
+                    <div class="placeholder-line line-2"></div>
+                    <div class="placeholder-line line-3"></div>
+                  </div>
+                  
+                  <div class="app-buttons">
+                    <div class="app-button blue"></div>
+                    <div class="app-button purple"></div>
+                  </div>
+                  
+                  <div class="app-cards">
+                    <div class="app-card">
+                      <div class="card-image blue"></div>
+                      <div class="card-line-sm"></div>
+                      <div class="card-line-xs"></div>
+                    </div>
+                    <div class="app-card">
+                      <div class="card-image purple"></div>
+                      <div class="card-line-xs"></div>
+                      <div class="card-line-sm"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="app-footer">
+                    <div class="footer-header">
+                      <div class="footer-avatar"></div>
+                      <div class="footer-title"></div>
+                    </div>
+                    <div class="footer-content">
+                      <div class="footer-line"></div>
+                      <div class="footer-line"></div>
+                      <div class="footer-line"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tool-feature top-right parallax-item" data-strength="0.08">
+              <div class="feature-icon message-icon"></div>
+              <div>
+                <h3 class="feature-title"><a href="extensions/gmail-assistant.html">Gmail Chatbot</a></h3>
+                <p class="feature-desc">AI email assistant</p>
+              </div>
+            </div>
+            
+            <div class="tool-feature top-left parallax-item" data-strength="0.06">
+              <div class="feature-icon file-check-icon"></div>
+              <div>
+                <h3 class="feature-title"><a href="extensions/grammar-checker.html">Grammar Checker</a></h3>
+                <p class="feature-desc">Real-time corrections</p>
+              </div>
+            </div>
+            
+            <div class="tool-feature bottom-right parallax-item" data-strength="0.07">
+              <div class="feature-icon brain-icon"></div>
+              <div>
+                <h3 class="feature-title"><a href="extensions/note-ai.html">Smart Note</a></h3>
+                <p class="feature-desc">AI-organized notes</p>
+              </div>
+            </div>
+
+            <div class="tool-feature bottom-right parallax-item" data-strength="0.07">
+              <div class="feature-icon brain-icon"></div>
+              <div>
+                <h3 class="feature-title"><a href="extensions/website-assistant.html">Smart Note</a></h3>
+                <p class="feature-desc">AI-organized notes</p>
+              </div>
+            </div>
+            
+            <div class="tool-feature bottom-left parallax-item" data-strength="0.05">
+              <div class="feature-icon briefcase-icon"></div>
+              <div>
+                <h3 class="feature-title">Resume Maker</h3>
+                <p class="feature-desc">Professional CV builder</p>
+              </div>
+            </div>
+
+            
+            
+            <div class="tool-feature bottom-middle parallax-item" data-strength="0.04">
+              <div class="feature-icon file-text-icon"></div>
+              <div>
+                <h3 class="feature-title"><a href="extensions/doc-assistant.html">Docs Assistant</a></h3>
+                <p class="feature-desc">Smart document help</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Our Extensions</h2>
+        <p class="section-description">
+          We've created a collection of AI-powered Chrome extensions designed to streamline your workflow, 
+          boost productivity, and enhance your browsing experience. Each extension leverages the latest in 
+          artificial intelligence to solve specific problems and make your digital life easier.
+        </p>
+      </div>
+    </section>
+
+    <!-- Extensions Showcase -->
+    <section class="extensions" id="extensions">
+      <div class="container">
+        <h2 class="section-title">Our Extensions</h2>
+        <div class="extensions-grid">
+          <!-- Extension 1 -->
+          <div class="extension-card" data-extension="ai-writer">
+            <div class="extension-icon">
+              <img src="icons/gmail.svg" alt="BOT Icon" />
+            </div>
+            <h3>Gmail Assistant</h3>
+            <p>Draft replies, summarize emails, and get instant insights within Gmail with AI assistance</p>
+            <a href="extensions/gmail-assistant.html" class="extension-link">Learn More</a>
+          </div>
+
+          <!-- Extension 2 -->
+          <div class="extension-card" data-extension="smart-summarizer">
+            <div class="extension-icon">
+              <img src="icons/grammar.svg" alt="G Icon" />
+            </div>
+            <h3>Grammar Checker</h3>
+            <p>Instantly summarize any article or webpage with one click</p>
+            <a href="extensions/grammar-checker.html" class="extension-link">Learn More</a>
+          </div>
+
+          <!-- Extension 3 -->
+          <div class="extension-card" data-extension="code-assistant">
+            <div class="extension-icon">
+              <img src="icons/note.svg" alt="B" />
+            </div>
+            <h3>Note AI</h3>
+            <p>Get code suggestions, explanations, and debugging help as you work</p>
+            <a href="extensions/note-ai.html" class="extension-link">Learn More</a>
+          </div>
+
+          <!-- Extension 4 -->
+          <div class="extension-card" data-extension="research-companion">
+            <div class="extension-icon">
+              <img src="icons/doc.svg" alt="Doc Icon" />
+            </div>
+            <h3>Doc Assistant</h3>
+            <p>Find sources, organize information, and accelerate your research</p>
+            <a href="extensions/doc-assistant.html" class="extension-link">Learn More</a>
+          </div>
+
+          <!-- Extension 5 -->
+          <div class="extension-card" data-extension="meeting-assistant">
+            <div class="extension-icon">
+              <img src="icons/resume.svg" alt="Briefcase Icon" />
+            </div>
+            <h3>Smart-Resume</h3>
+            <p>Take automated notes during meetings and generate summaries</p>
+            <a href="extensions/resume.html" class="extension-link">Learn More</a>
+          </div>
+
+          <!-- Extension 6 -->
+          <div class="extension-card" data-extension="data-analyzer">
+            <div class="extension-icon">
+              <img src="icons/gmail.svg" alt="Pencil Icon" />
+            </div>
+            <h3>Website Assistant</h3>
+            <p>Extract insights from any website in real-time</p>
+            <a href="extensions/company-bot.html" class="extension-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Why Choose Our Extensions</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Lightning Fast</h3>
+            <p>Get instant results with our optimized AI algorithms</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Privacy Focused</h3>
+            <p>Your data stays private and secure at all times</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Smart Adaptation</h3>
+            <p>Our AI learns from your usage to provide better results</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Seamless Integration</h3>
+            <p>Works with your existing workflow without disruption</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Users Say</h2>
+        <div class="testimonial-carousel">
+          <div class="testimonial-slide active">
+            <p class="testimonial-content">"The AI Writer extension has completely transformed how I handle emails. I save at least an hour every day!"</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K." class="author-image">
+              <p class="author-name">Sarah K.</p>
+              <p class="author-title">Marketing Director</p>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-content">"As a developer, the Code Assistant has become my pair programming buddy. It's like having an expert looking over my shoulder."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Alex M." class="author-image">
+              <p class="author-name">Alex M.</p>
+              <p class="author-title">Senior Developer</p>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <p class="testimonial-content">"The Research Companion has cut my research time in half. It's like having a personal research assistant."</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Lisa J." class="author-image">
+              <p class="author-name">Lisa J.</p>
+              <p class="author-title">PhD Student</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-control prev" id="testimonialPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-indicators" id="testimonialIndicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+          </div>
+          <button class="testimonial-control next" id="testimonialNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section
+    <section class="stats" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 class="stat-number" data-target="100000">0</h3>
+            <p class="stat-title">Active Users</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number" data-target="6">0</h3>
+            <p class="stat-title">Extensions</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number" data-target="4.8">0</h3>
+            <p class="stat-title">Average Rating</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-number" data-target="10000">0</h3>
+            <p class="stat-title">Hours Saved</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Call to Action -->
+    <section class="cta" id="cta">
+      <div class="container">
+        <h2 class="cta-title">Ready to Transform Your Workflow?</h2>
+        <p class="cta-description">Join thousands of users leveraging AI to work smarter, not harder.</p>
+        <a href="#extensions" class="cta-button">Explore Extensions</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3 class="footer-title">Extensions</h3>
+            <p class="footer-description">Supercharge your workflow with AI-powered Chrome extensions.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#extensions">Extensions</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-envelope"></i> hello@aiextensions.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 AI Extensions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
